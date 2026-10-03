@@ -1,0 +1,19 @@
+{
+  "name": "ai-mascot-monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r --filter ./packages/** build",
+    "test": "vitest run",
+    "typecheck": "pnpm -r exec tsc --noEmit",
+    "dev": "pnpm --filter playground dev"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0",
+    "happy-dom": "^18.0.0",
+    "@types/node": "^24.0.0"
+  },
+  "packageManager": "pnpm@12.8.1",
+  "license": "MIT"
+}

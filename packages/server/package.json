@@ -1,0 +1,25 @@
+{
+  "name": "ai-mascot-server",
+  "version": "0.1.0",
+  "description": "Tiny streaming chat backend for ai-mascot. Keeps your API keys off the browser. OpenAI, Claude, Gemini, Ollama.",
+  "type": "module",
+  "license": "MIT",
+  "author": "AQUA LLC (YUA LAB)",
+  "homepage": "https://github.com/YUALAB/ai-mascot",
+  "repository": { "type": "git", "url": "git+https://github.com/YUALAB/ai-mascot.git", "directory": "packages/server" },
+  "keywords": ["ai", "chatbot", "mascot", "openai", "claude", "gemini", "ollama", "hono"],
+  "exports": {
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }
+  },
+  "bin": { "ai-mascot-server": "./dist/cli.js" },
+  "files": ["dist"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && chmod +x dist/cli.js",
+    "dev": "tsc -p tsconfig.build.json && node dist/cli.js"
+  },
+  "dependencies": {
+    "hono": "^4.9.0",
+    "@hono/node-server": "^1.19.0"
+  }
+}

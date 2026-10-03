@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><link rel="icon" href="data:,"><title>gallery</title>
+<style>body{margin:0;padding:24px;background:#eef3f7;font-family:system-ui} .g{display:grid;grid-template-columns:repeat(5,200px);gap:16px} .c{background:#fff;border-radius:16px;padding:10px} .c svg{width:100%;height:auto;display:block} .m-open{opacity:0} .c p{margin:4px 0 0;text-align:center;font-size:12px;color:#557083}</style></head>
+<body><div class="g" id="g"></div>
+<script type="module">
+import { listCharacters, renderCharacter } from 'ai-mascot';
+const g = document.getElementById('g');
+const rows = [['none', null], ['headset', null], ['coat', null], ['bowtie', null], ['none', '#f4b6c2']];
+for (const [acc, col] of rows) for (const c of listCharacters()) {
+  const d = document.createElement('div'); d.className = 'c';
+  const a = c.accessories.includes(acc) ? acc : 'none';
+  d.innerHTML = renderCharacter(c, { color: col ?? c.defaultColor, accessory: a }) + `<p>${c.id} · ${a}${col ? ' · ' + col : ''}</p>`;
+  g.appendChild(d);
+}
+</script></body></html>

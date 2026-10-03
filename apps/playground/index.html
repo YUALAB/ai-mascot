@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:," />
+  <title>ai-mascot — an animated AI character for any website</title>
+  <meta name="description" content="Drop an animated AI character on any website with one line. OpenAI, Claude, Gemini, Ollama." />
+  <style>
+    :root { --ink: #0f2733; --sub: #557083; --line: #dbe5ec; --bg: #eef3f7; --accent: #0a7ea4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", Roboto, sans-serif; color: var(--ink); background: radial-gradient(80% 60% at 80% 0%, #dff4fb, transparent 60%), var(--bg); }
+    main { max-width: 1120px; margin: 0 auto; padding: 56px 24px 120px; }
+    h1 { margin: 0; font-size: clamp(34px, 5vw, 56px); letter-spacing: -0.03em; line-height: 1.1; }
+    h1 span { color: var(--accent); }
+    .lead { max-width: 40em; margin: 16px 0 36px; font-size: 17px; line-height: 1.8; color: var(--sub); }
+    .grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
+    @media (max-width: 900px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+    ai-mascot[mode="inline"] { height: 580px; border-radius: 22px; box-shadow: 0 40px 90px -40px rgba(15,39,51,0.5); }
+    .ctl { padding: 22px; border-radius: 20px; background: #fff; border: 1px solid var(--line); }
+    .ctl h2 { margin: 0 0 14px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sub); }
+    .row { margin-bottom: 16px; }
+    .row > label { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 600; }
+    .sw { display: flex; gap: 8px; flex-wrap: wrap; }
+    .sw button { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--line); cursor: pointer; }
+    .sw button[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--accent); }
+    .seg { display: flex; flex-wrap: wrap; gap: 6px; }
+    .seg button { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font: inherit; font-size: 13px; cursor: pointer; }
+    .seg button:disabled { opacity: 0.35; cursor: default; }
+    .seg button[aria-pressed="true"] { border-color: var(--accent); background: #e6f5fa; color: var(--accent); }
+    input[type="text"] { width: 100%; padding: 9px 12px; border: 1px solid var(--line); border-radius: 10px; font: inherit; font-size: 15px; }
+    pre { margin: 18px 0 0; padding: 14px; border-radius: 12px; background: #0b141a; color: #cfe8f3; font-size: 12px; line-height: 1.6; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>An AI character for <span>any website</span>.</h1>
+    <p class="lead">One line of HTML. It blinks, tilts its head while thinking, and moves its mouth as the answer streams in. Bring your own model — OpenAI, Claude, Gemini, or a free local Ollama.</p>
+    <div class="grid">
+      <ai-mascot id="m" mode="inline" endpoint="/api/chat" suggestions="What can you do?|Who made you?|日本語で話して"></ai-mascot>
+      <div class="ctl">
+        <h2>Try it</h2>
+        <div class="row"><label>Character</label><div class="seg" id="character"></div></div>
+        <div class="row"><label>Color</label><div class="sw" id="color"></div></div>
+        <div class="row"><label>Outfit</label><div class="seg" id="accessory"></div></div>
+        <div class="row"><label>Tone</label><div class="seg" id="tone"></div></div>
+        <div class="row"><label>Language</label><div class="seg" id="lang"></div></div>
+        <div class="row"><label for="name">Name</label><input id="name" type="text" maxlength="16" value="YUA" /></div>
+        <pre id="code"></pre>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

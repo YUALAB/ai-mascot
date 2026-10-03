@@ -1,0 +1,8 @@
+{
+  "name": "playground",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "vite build" },
+  "dependencies": { "ai-mascot": "workspace:*", "ai-mascot-server": "workspace:*" },
+  "devDependencies": { "vite": "^7.1.0" }
+}

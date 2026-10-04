@@ -11,7 +11,7 @@ Bring your own model: **OpenAI, Claude, Gemini, or a free local Ollama.**
 
 [日本語](#日本語) · [Quick start](#quick-start) · [Characters](#characters) · [Server](#server) · [Security](#security)
 
-<img src="docs/screenshot.png" alt="YUA, the cat mascot, answering a question" width="640">
+<img src="docs/demo.gif" alt="A cat mascot opens from the corner of a bakery website, answers 'Are you open on Sundays?' with a link to the page it used, then switches to a dog, a bear, a robot and a ghost" width="800">
 
 </div>
 
@@ -139,6 +139,7 @@ pnpm install
 pnpm test
 pnpm --filter ai-mascot-server dev   # server on :8787 (offline demo provider)
 pnpm dev                             # playground on :5173
+# the README GIF is recorded from http://localhost:5173/demo.html?play
 ```
 
 ---

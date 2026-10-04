@@ -6,18 +6,38 @@
   "license": "MIT",
   "author": "AQUA LLC (YUA LAB)",
   "homepage": "https://github.com/YUALAB/ai-mascot",
-  "repository": { "type": "git", "url": "git+https://github.com/YUALAB/ai-mascot.git", "directory": "packages/widget" },
-  "keywords": ["ai", "chatbot", "mascot", "character", "web-component", "widget", "openai", "claude", "gemini", "ollama"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YUALAB/ai-mascot.git",
+    "directory": "packages/widget"
+  },
+  "keywords": [
+    "ai",
+    "chatbot",
+    "mascot",
+    "character",
+    "web-component",
+    "widget",
+    "openai",
+    "claude",
+    "gemini",
+    "ollama"
+  ],
   "main": "./dist/ai-mascot.js",
   "module": "./dist/ai-mascot.js",
   "types": "./dist/index.d.ts",
   "unpkg": "./dist/ai-mascot.iife.js",
   "jsdelivr": "./dist/ai-mascot.iife.js",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/ai-mascot.js" },
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/ai-mascot.js"
+    },
     "./iife": "./dist/ai-mascot.iife.js"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "sideEffects": true,
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json"

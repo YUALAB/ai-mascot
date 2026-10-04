@@ -7,11 +7,9 @@
 It blinks, tilts its head while thinking, and moves its mouth as the answer streams in.<br>
 Bring your own model: **OpenAI, Claude, Gemini, or a free local Ollama.**
 
-[![npm](https://img.shields.io/npm/v/ai-mascot?color=0a7ea4&label=ai-mascot)](https://www.npmjs.com/package/ai-mascot) [![gzip size](https://img.shields.io/bundlejs/size/ai-mascot?label=gzip)](https://bundlejs.com/?q=ai-mascot) [![CI](https://github.com/YUALAB/ai-mascot/actions/workflows/ci.yml/badge.svg)](https://github.com/YUALAB/ai-mascot/actions) [![MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-
 [日本語](#日本語) · [Quick start](#quick-start) · [Characters](#characters) · [Server](#server) · [Security](#security)
 
-<img src="docs/screenshot.png" alt="YUA, the cat mascot, answering a question" width="640">
+<img src="https://raw.githubusercontent.com/YUALAB/ai-mascot/main/docs/screenshot.png" alt="YUA, the cat mascot, answering a question" width="640">
 
 </div>
 
@@ -65,18 +63,18 @@ JavaScript API: `el.open()`, `el.close()`, `el.ask("text")`, and the `ai-mascot:
 
 ## Characters
 
-<img src="docs/characters.png" alt="Five characters: YUA the cat, KOTA the dog, MOCHI the bear, BOLT the robot and BOO the ghost" width="760">
+<img src="https://raw.githubusercontent.com/YUALAB/ai-mascot/main/docs/characters.png" alt="Five characters: YUA the cat, KOTA the dog, MOCHI the bear, BOLT the robot and BOO the ghost" width="760">
 
 Every character takes any `color`. Outfits: `headset`, `coat` (doctor), `bowtie` (robot: bowtie, ghost: headset/bowtie).
 
-A character is a function that returns SVG. The widget brings it to life by looking for a few class names — `.m-eye` (blink), `.m-eyes` (follow the pointer), `.m-mouth` / `.m-open` (talk), `.m-head` (tilt), `.m-tail`, `.m-ear`, `.m-wave`. See [`packages/widget/src/characters/types.ts`](packages/widget/src/characters/types.ts).
+A character is a function that returns SVG. The widget brings it to life by looking for a few class names — `.m-eye` (blink), `.m-eyes` (follow the pointer), `.m-mouth` / `.m-open` (talk), `.m-head` (tilt), `.m-tail`, `.m-ear`, `.m-wave`. See [`packages/widget/src/characters/types.ts`](https://github.com/YUALAB/ai-mascot/blob/main/packages/widget/src/characters/types.ts).
 
 ```js
 import { registerCharacter } from 'ai-mascot';
 registerCharacter(myDog);
 ```
 
-**New characters are very welcome.** Dogs, robots, ghosts, your company's mascot — see [CONTRIBUTING.md](CONTRIBUTING.md).
+**New characters are very welcome.** Dogs, robots, ghosts, your company's mascot — see [CONTRIBUTING.md](https://github.com/YUALAB/ai-mascot/blob/main/CONTRIBUTING.md).
 
 ## Answer from your website
 
@@ -159,7 +157,7 @@ pnpm dev                             # playground on :5173
 - キャラクターは猫（YUA）・犬（KOTA）・クマ（MOCHI）・ロボット（BOLT）・おばけ（BOO）の5体。色は自由です。
 - `npx ai-mascot-server index https://あなたのサイト` でサイトを読み込むと、そのページの内容から答え、参考にしたページも表示します。
 - `npx create-ai-mascot` で、AIの選択・キーの保存・サイトの読み込みまで1分で準備できます。
-- キャラクターは誰でも追加できます。[CONTRIBUTING.md](CONTRIBUTING.md) をご覧ください。
+- キャラクターは誰でも追加できます。[CONTRIBUTING.md](https://github.com/YUALAB/ai-mascot/blob/main/CONTRIBUTING.md) をご覧ください。
 
 ### 会社だけのオリジナルキャラクターを作りたい方へ
 

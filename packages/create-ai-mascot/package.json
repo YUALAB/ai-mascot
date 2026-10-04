@@ -6,10 +6,27 @@
   "license": "MIT",
   "author": "AQUA LLC (YUA LAB)",
   "homepage": "https://github.com/YUALAB/ai-mascot",
-  "repository": { "type": "git", "url": "git+https://github.com/YUALAB/ai-mascot.git", "directory": "packages/create-ai-mascot" },
-  "bin": { "create-ai-mascot": "./dist/index.js" },
-  "exports": { ".": { "types": "./dist/scaffold.d.ts", "import": "./dist/scaffold.js" } },
-  "files": ["dist"],
-  "engines": { "node": ">=20.6" },
-  "scripts": { "build": "tsc -p tsconfig.build.json && chmod +x dist/index.js" }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YUALAB/ai-mascot.git",
+    "directory": "packages/create-ai-mascot"
+  },
+  "bin": {
+    "create-ai-mascot": "dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/scaffold.d.ts",
+      "import": "./dist/scaffold.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && chmod +x dist/index.js"
+  }
 }

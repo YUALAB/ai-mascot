@@ -6,14 +6,36 @@
   "license": "MIT",
   "author": "AQUA LLC (YUA LAB)",
   "homepage": "https://github.com/YUALAB/ai-mascot",
-  "repository": { "type": "git", "url": "git+https://github.com/YUALAB/ai-mascot.git", "directory": "packages/server" },
-  "keywords": ["ai", "chatbot", "mascot", "openai", "claude", "gemini", "ollama", "hono"],
-  "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YUALAB/ai-mascot.git",
+    "directory": "packages/server"
   },
-  "bin": { "ai-mascot-server": "./dist/cli.js" },
-  "files": ["dist"],
-  "engines": { "node": ">=18" },
+  "keywords": [
+    "ai",
+    "chatbot",
+    "mascot",
+    "openai",
+    "claude",
+    "gemini",
+    "ollama",
+    "hono"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "ai-mascot-server": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json && chmod +x dist/cli.js",
     "dev": "tsc -p tsconfig.build.json && node dist/cli.js"
